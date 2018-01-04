@@ -214,9 +214,14 @@ while True:
 while True:
 	ike_proposal_lifetime_seconds = raw_input("Please enter lifetime, in seconds: ")
 	if re.match("^[0-9]*$", ike_proposal_lifetime_seconds):
-		print ("The IKE proposal lifetime is: " + ike_proposal_lifetime_seconds)
-		set_commands['4'] = ike_proposal_lifetime_seconds
+		ike_proposal_lifetime_seconds_command = "set security ike proposal " + ike_proposal_name + " lifetime-seconds " + ike_proposal_lifetime_seconds
+		print ike_proposal_lifetime_seconds_command
+		set_commands['4'] = ike_proposal_lifetime_seconds_command
 		break
 	else:
 		print "Enter a valid name"
 		continue
+
+
+for entry in set_commands:
+	print entry, set_commands[entry]
