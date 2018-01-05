@@ -9,7 +9,7 @@ print "VPN builder script for Junos devices \n"
 
 set_commands = {}
 
-print "We start by configuring the IKE proposal \n"
+print "Configure the IKE proposal \n"
 while True:
 	ike_proposal_name = raw_input("Please enter a name for the IKE proposal: ")
 	if re.match("^[A-Za-z0-9_-]*$", ike_proposal_name):
@@ -34,22 +34,18 @@ while True:
 	selection_ike_proposal_auth_algo = raw_input("Please Select:")
 	if selection_ike_proposal_auth_algo == '1':
 		ike_proposal_auth_algo = "set security ike proposal " + ike_proposal_name + " authentication-algorithm " + menu_ike_proposal_auth_algo['1']
-		print (ike_proposal_auth_algo)
 		set_commands['0'] = ike_proposal_auth_algo
 		break
 	elif selection_ike_proposal_auth_algo == '2':
 		ike_proposal_auth_algo = "set security ike proposal " + ike_proposal_name + " authentication-algorithm " + menu_ike_proposal_auth_algo['2']
-		print (ike_proposal_auth_algo)
 		set_commands['0'] = ike_proposal_auth_algo
 		break
 	elif selection_ike_proposal_auth_algo == '3':
 		ike_proposal_auth_algo = "set security ike proposal " + ike_proposal_name + " authentication-algorithm " + menu_ike_proposal_auth_algo['3']
-		print (ike_proposal_auth_algo)
 		set_commands['0'] = ike_proposal_auth_algo
 		break
 	elif selection_ike_proposal_auth_algo == '4':
 		ike_proposal_auth_algo = "set security ike proposal " + ike_proposal_name + " authentication-algorithm " + menu_ike_proposal_auth_algo['4']
-		print (ike_proposal_auth_algo)
 		set_commands['0'] = ike_proposal_auth_algo
 		break
 	else:
@@ -72,27 +68,22 @@ while True:
 	selection_ike_proposal_auth_method = raw_input("Please Select:")
 	if selection_ike_proposal_auth_method == '1':
 		ike_proposal_auth_method = "set security ike proposal " + ike_proposal_name + " authentication-method " + menu_ike_proposal_auth_method['1']
-		print (ike_proposal_auth_method)
 		set_commands['1'] = ike_proposal_auth_method
 		break
 	elif selection_ike_proposal_auth_method == '2':
 		ike_proposal_auth_method = "set security ike proposal " + ike_proposal_name + " authentication-method " + menu_ike_proposal_auth_method['2']
-		print (ike_proposal_auth_method)
 		set_commands['1'] = ike_proposal_auth_method
 		break
 	elif selection_ike_proposal_auth_method == '3':
 		ike_proposal_auth_method = "set security ike proposal " + ike_proposal_name + " authentication-method " + menu_ike_proposal_auth_method['3']
-		print (ike_proposal_auth_method)
 		set_commands['1'] = ike_proposal_auth_method
 		break
 	elif selection_ike_proposal_auth_method == '4':
 		ike_proposal_auth_method = "set security ike proposal " + ike_proposal_name + " authentication-method " + menu_ike_proposal_auth_method['4']
-		print (ike_proposal_auth_method)
 		set_commands['1'] = ike_proposal_auth_method
 		break
 	elif selection_ike_proposal_auth_method == '5':
 		ike_proposal_auth_method = "set security ike proposal " + ike_proposal_name + " authentication-method " + menu_ike_proposal_auth_method['5']
-		print (ike_proposal_auth_method)
 		set_commands['1'] = ike_proposal_auth_method
 		break
 	else:
@@ -118,37 +109,30 @@ while True:
 	selection_ike_proposal_dh_group = raw_input("Please Select:")
 	if selection_ike_proposal_dh_group == '1':
 		ike_proposal_dh_group = "set security ike proposal " + ike_proposal_name + " dh-group " + menu_ike_proposal_dh_group['1']
-		print (ike_proposal_dh_group)
 		set_commands['2'] = ike_proposal_dh_group
 		break
 	elif selection_ike_proposal_dh_group == '2':
 		ike_proposal_dh_group = "set security ike proposal " + ike_proposal_name + " dh-group " + menu_ike_proposal_dh_group['2']
-		print (ike_proposal_dh_group)
 		set_commands['2'] = ike_proposal_dh_group
 		break
 	elif selection_ike_proposal_dh_group == '3':
 		ike_proposal_dh_group = "set security ike proposal " + ike_proposal_name + " dh-group " + menu_ike_proposal_dh_group['3']
-		print (ike_proposal_dh_group)
 		set_commands['2'] = ike_proposal_dh_group
 		break
 	elif selection_ike_proposal_dh_group == '4':
 		ike_proposal_dh_group = "set security ike proposal " + ike_proposal_name + " dh-group " + menu_ike_proposal_dh_group['4']
-		print (ike_proposal_dh_group)
 		set_commands['2'] = ike_proposal_dh_group
 		break
 	elif selection_ike_proposal_dh_group == '5':
 		ike_proposal_dh_group = "set security ike proposal " + ike_proposal_name + " dh-group " + menu_ike_proposal_dh_group['5']
-		print (ike_proposal_dh_group)
 		set_commands['2'] = ike_proposal_dh_group
 		break
 	elif selection_ike_proposal_dh_group == '6':
 		ike_proposal_dh_group = "set security ike proposal " + ike_proposal_name + " dh-group " + menu_ike_proposal_dh_group['6']
-		print (ike_proposal_dh_group)
 		set_commands['2'] = ike_proposal_dh_group
 		break
 	elif selection_ike_proposal_dh_group == '7':
 		ike_proposal_dh_group = "set security ike proposal " + ike_proposal_name + " dh-group " + menu_ike_proposal_dh_group['7']
-		print (ike_proposal_dh_group)
 		set_commands['2'] = ike_proposal_dh_group
 		break
 	else:
@@ -174,37 +158,30 @@ while True:
 	selection_ike_proposal_enc_algo = raw_input("Please Select:")
 	if selection_ike_proposal_enc_algo == '1':
 		ike_proposal_enc_algo = "set security ike proposal " + ike_proposal_name + " encryption-algorithm " + menu_ike_proposal_enc_algo['1']
-		print (ike_proposal_enc_algo)
 		set_commands['3'] = ike_proposal_enc_algo
 		break
 	elif selection_ike_proposal_enc_algo == '2':
 		ike_proposal_enc_algo = "set security ike proposal " + ike_proposal_name + " encryption-algorithm " + menu_ike_proposal_enc_algo['2']
-		print (ike_proposal_enc_algo)
 		set_commands['3'] = ike_proposal_enc_algo
 		break
 	elif selection_ike_proposal_enc_algo == '3':
 		ike_proposal_enc_algo = "set security ike proposal " + ike_proposal_name + " encryption-algorithm " + menu_ike_proposal_enc_algo['3']
-		print (ike_proposal_enc_algo)
 		set_commands['3'] = ike_proposal_enc_algo
 		break
 	elif selection_ike_proposal_enc_algo == '4':
 		ike_proposal_enc_algo = "set security ike proposal " + ike_proposal_name + " encryption-algorithm " + menu_ike_proposal_enc_algo['4']
-		print (ike_proposal_enc_algo)
 		set_commands['3'] = ike_proposal_enc_algo
 		break
 	elif selection_ike_proposal_enc_algo == '5':
 		ike_proposal_enc_algo = "set security ike proposal " + ike_proposal_name + " encryption-algorithm " + menu_ike_proposal_enc_algo['5']
-		print (ike_proposal_enc_algo)
 		set_commands['3'] = ike_proposal_enc_algo
 		break
 	elif selection_ike_proposal_enc_algo == '6':
 		ike_proposal_enc_algo = "set security ike proposal " + ike_proposal_name + " encryption-algorithm " + menu_ike_proposal_enc_algo['6']
-		print (ike_proposal_enc_algo)
 		set_commands['3'] = ike_proposal_enc_algo
 		break
 	elif selection_ike_proposal_enc_algo == '7':
 		ike_proposal_enc_algo = "set security ike proposal " + ike_proposal_name + " encryption-algorithm " + menu_ike_proposal_enc_algo['7']
-		print (ike_proposal_enc_algo)
 		set_commands['3'] = ike_proposal_enc_algo
 		break
 	else:
@@ -222,43 +199,6 @@ while True:
 		print "Enter a valid name"
 		continue
 
-
-print "Now we configure the IKE policy \n"
-
-while True:
-	ike_policy_name = raw_input("Please enter a name for the IKE policy: ")
-	if re.match("^[A-Za-z0-9_-]*$", ike_policy_name):
-		print ("The IKE proposal name is: " + ike_policy_name)
-		break
-	else:
-		print "Enter a valid name"
-		continue
-
-
-menu_ike_policy_mode = {}
-menu_ike_policy_mode['1'] = "aggressive"
-menu_ike_policy_mode['2'] = "main"
-
-
-while True:
-	options_ike_policy_mode = menu_ike_policy_mode.keys()
-	options_ike_policy_mode.sort()
-	for entry in options_ike_policy_mode:
-		print entry, menu_ike_policy_mode[entry]
-
-	selection_ike_policy_mode = raw_input("Please Select:")
-	if selection_ike_policy_mode == '1':
-		ike_proposal_policy_mode = "set security ike proposal " + ike_proposal_name + " encryption-algorithm " + menu_ike_policy_mode['1']
-		print (ike_proposal_policy_mode)
-		set_commands['3'] = ike_proposal_policy_mode
-		break
-	elif selection_ike_policy_mode == '2':
-		ike_proposal_policy_mode = "set security ike proposal " + ike_proposal_name + " encryption-algorithm " + menu_ike_policy_mode['2']
-		print (ike_proposal_policy_mode)
-		set_commands['3'] = ike_proposal_policy_mode
-		break
-	else:
-		print "Unknown option selected"
 
 for entry in set_commands:
 	print set_commands[entry]
