@@ -9,7 +9,7 @@ print "VPN builder script for Junos devices \n"
 
 set_commands = {}
 
-print "We start by configuring the IKE proposal"
+print "We start by configuring the IKE proposal \n"
 while True:
 	ike_proposal_name = raw_input("Please enter a name for the IKE proposal: ")
 	if re.match("^[A-Za-z0-9_-]*$", ike_proposal_name):
@@ -223,5 +223,42 @@ while True:
 		continue
 
 
+print "Now we configure the IKE policy \n"
+
+while True:
+	ike_policy_name = raw_input("Please enter a name for the IKE policy: ")
+	if re.match("^[A-Za-z0-9_-]*$", ike_policy_name):
+		print ("The IKE proposal name is: " + ike_policy_name)
+		break
+	else:
+		print "Enter a valid name"
+		continue
+
+
+menu_ike_policy_mode = {}
+menu_ike_policy_mode['1'] = "aggressive"
+menu_ike_policy_mode['2'] = "main"
+
+
+while True:
+	options_ike_policy_mode = menu_ike_policy_mode.keys()
+	options_ike_policy_mode.sort()
+	for entry in options_ike_policy_mode:
+		print entry, menu_ike_policy_mode[entry]
+
+	selection_ike_policy_mode = raw_input("Please Select:")
+	if selection_ike_policy_mode == '1':
+		ike_proposal_policy_mode = "set security ike proposal " + ike_proposal_name + " encryption-algorithm " + menu_ike_policy_mode['1']
+		print (ike_proposal_policy_mode)
+		set_commands['3'] = ike_proposal_policy_mode
+		break
+	elif selection_ike_policy_mode == '2':
+		ike_proposal_policy_mode = "set security ike proposal " + ike_proposal_name + " encryption-algorithm " + menu_ike_policy_mode['2']
+		print (ike_proposal_policy_mode)
+		set_commands['3'] = ike_proposal_policy_mode
+		break
+	else:
+		print "Unknown option selected"
+
 for entry in set_commands:
-	print entry, set_commands[entry]
+	print set_commands[entry]
