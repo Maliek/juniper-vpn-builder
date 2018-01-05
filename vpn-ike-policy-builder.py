@@ -13,12 +13,13 @@ print "Configure the IKE policy \n"
 while True:
 	ike_policy_name = raw_input("Please enter a name for the IKE policy: ")
 	if re.match("^[A-Za-z0-9_-]*$", ike_policy_name):
-		print ("The IKE proposal name is: " + ike_policy_name)
+		print ("The IKE policy name is: " + ike_policy_name)
 		break
 	else:
 		print "Enter a valid name"
 		continue
 
+print "Configure the IKE policy mode \n"
 
 menu_ike_policy_mode = {}
 menu_ike_policy_mode['1'] = "aggressive"
