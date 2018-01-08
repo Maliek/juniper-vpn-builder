@@ -99,8 +99,8 @@ while True:
 						continue
 			elif selection_ike_policy_cert == '3':
 				ike_policy_cert_custom = raw_input("set security ike policy " + ike_policy_name + " " + menu_ike_policy_cert_or_psc['1'] + " ")
-				ike_proposal_policy_cert_command = "set security ike policy " + ike_policy_name + " " + menu_ike_policy_cert_or_psc['1'] + " " + ike_policy_cert_custom
-				set_commands['2'] = ike_proposal_policy_cert_command
+				ike_policy_policy_cert_command = "set security ike policy " + ike_policy_name + " " + menu_ike_policy_cert_or_psc['1'] + " " + ike_policy_cert_custom
+				set_commands['2'] = ike_policy_policy_cert_command
 			else:
 				print "Unknown option selected"
 				continue
@@ -121,13 +121,13 @@ while True:
 			selection_ike_policy_psc = raw_input("Please Select:")
 			if selection_ike_policy_psc == '1':	
 				ike_policy_psc_ascii = raw_input("set security ike policy " + ike_policy_name + " " + menu_ike_policy_cert_or_psc['2'] + " " + menu_ike_policy_psc['1'] + " ")
-				ike_proposal_policy_psc_ascii_command = "set security ike policy " + ike_policy_name + " " + menu_ike_policy_cert_or_psc['2'] + " " + menu_ike_policy_psc['1'] + " " + ike_policy_psc_ascii
-				set_commands['2'] = ike_proposal_policy_psc_ascii_command
+				ike_policy_policy_psc_ascii_command = "set security ike policy " + ike_policy_name + " " + menu_ike_policy_cert_or_psc['2'] + " " + menu_ike_policy_psc['1'] + " " + ike_policy_psc_ascii
+				set_commands['2'] = ike_policy_policy_psc_ascii_command
 				break
 			elif selection_ike_policy_psc == '2':
 				ike_policy_psc_hex = raw_input("set security ike policy " + ike_policy_name + " " + menu_ike_policy_cert_or_psc['2'] + " " + menu_ike_policy_psc['2'] + " ")
-				ike_proposal_policy_psc_hex_command = "set security ike policy " + ike_policy_name + " " + menu_ike_policy_cert_or_psc['2'] + " " + menu_ike_policy_psc['2'] + " " + ike_policy_psc_hex
-				set_commands['2'] = ike_proposal_policy_psc_hex_command
+				ike_policy_policy_psc_hex_command = "set security ike policy " + ike_policy_name + " " + menu_ike_policy_cert_or_psc['2'] + " " + menu_ike_policy_psc['2'] + " " + ike_policy_psc_hex
+				set_commands['2'] = ike_policy_policy_psc_hex_command
 				break
 			else:
 				print "Unknown option selected"
@@ -136,8 +136,8 @@ while True:
 
 
 menu_ike_policy_prop = {}
-menu_ike_policy_prop['1'] = "proposal-set"
-menu_ike_policy_prop['2'] = "proposals"
+menu_ike_policy_prop['1'] = "policy-set"
+menu_ike_policy_prop['2'] = "policys"
 
 while True:
 	options_ike_policy_prop = menu_ike_policy_prop.keys()
@@ -197,8 +197,8 @@ while True:
 		break
 	elif selection_ike_policy_prop == '2':
 		ike_policy_props_input = raw_input("set security ike policy " + ike_policy_name + " " + menu_ike_policy_prop['2'] + " ")
-		ike_proposal_policy_props_command = "set security ike policy " + ike_policy_name + " " + menu_ike_policy_prop['2'] + " [ " + ike_policy_props_input + " ]"
-		set_commands['3'] = ike_proposal_policy_props_command
+		ike_policy_policy_props_command = "set security ike policy " + ike_policy_name + " " + menu_ike_policy_prop['2'] + " [ " + ike_policy_props_input + " ]"
+		set_commands['3'] = ike_policy_policy_props_command
 		break
 	else:
 		print "Unknown option selected"
