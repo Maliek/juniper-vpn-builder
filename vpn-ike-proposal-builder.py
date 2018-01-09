@@ -33,18 +33,22 @@ while True:
 
 	selection_ike_proposal_auth_algo = raw_input("Please Select:")
 	if selection_ike_proposal_auth_algo == '1':
+		conf_auth_algo = menu_ike_proposal_auth_algo['1']
 		ike_proposal_auth_algo = "set security ike proposal " + ike_proposal_name + " authentication-algorithm " + menu_ike_proposal_auth_algo['1']
 		set_commands['0'] = ike_proposal_auth_algo
 		break
 	elif selection_ike_proposal_auth_algo == '2':
+		conf_auth_algo = menu_ike_proposal_auth_algo['2']
 		ike_proposal_auth_algo = "set security ike proposal " + ike_proposal_name + " authentication-algorithm " + menu_ike_proposal_auth_algo['2']
 		set_commands['0'] = ike_proposal_auth_algo
 		break
 	elif selection_ike_proposal_auth_algo == '3':
+		conf_auth_algo = menu_ike_proposal_auth_algo['3']
 		ike_proposal_auth_algo = "set security ike proposal " + ike_proposal_name + " authentication-algorithm " + menu_ike_proposal_auth_algo['3']
 		set_commands['0'] = ike_proposal_auth_algo
 		break
 	elif selection_ike_proposal_auth_algo == '4':
+		conf_auth_algo = menu_ike_proposal_auth_algo['4']
 		ike_proposal_auth_algo = "set security ike proposal " + ike_proposal_name + " authentication-algorithm " + menu_ike_proposal_auth_algo['4']
 		set_commands['0'] = ike_proposal_auth_algo
 		break
@@ -67,22 +71,27 @@ while True:
 
 	selection_ike_proposal_auth_method = raw_input("Please Select:")
 	if selection_ike_proposal_auth_method == '1':
+		conf_auth_method = menu_ike_proposal_auth_method['1']
 		ike_proposal_auth_method = "set security ike proposal " + ike_proposal_name + " authentication-method " + menu_ike_proposal_auth_method['1']
 		set_commands['1'] = ike_proposal_auth_method
 		break
 	elif selection_ike_proposal_auth_method == '2':
+		conf_auth_method = menu_ike_proposal_auth_method['2']
 		ike_proposal_auth_method = "set security ike proposal " + ike_proposal_name + " authentication-method " + menu_ike_proposal_auth_method['2']
 		set_commands['1'] = ike_proposal_auth_method
 		break
 	elif selection_ike_proposal_auth_method == '3':
+		conf_auth_method = menu_ike_proposal_auth_method['3']
 		ike_proposal_auth_method = "set security ike proposal " + ike_proposal_name + " authentication-method " + menu_ike_proposal_auth_method['3']
 		set_commands['1'] = ike_proposal_auth_method
 		break
 	elif selection_ike_proposal_auth_method == '4':
+		conf_auth_method = menu_ike_proposal_auth_method['4']
 		ike_proposal_auth_method = "set security ike proposal " + ike_proposal_name + " authentication-method " + menu_ike_proposal_auth_method['4']
 		set_commands['1'] = ike_proposal_auth_method
 		break
 	elif selection_ike_proposal_auth_method == '5':
+		conf_auth_method = menu_ike_proposal_auth_method['5']
 		ike_proposal_auth_method = "set security ike proposal " + ike_proposal_name + " authentication-method " + menu_ike_proposal_auth_method['5']
 		set_commands['1'] = ike_proposal_auth_method
 		break
@@ -108,30 +117,37 @@ while True:
 
 	selection_ike_proposal_dh_group = raw_input("Please Select:")
 	if selection_ike_proposal_dh_group == '1':
+		conf_dh_group = menu_ike_proposal_dh_group['1']
 		ike_proposal_dh_group = "set security ike proposal " + ike_proposal_name + " dh-group " + menu_ike_proposal_dh_group['1']
 		set_commands['2'] = ike_proposal_dh_group
 		break
 	elif selection_ike_proposal_dh_group == '2':
+		conf_dh_group = menu_ike_proposal_dh_group['2']
 		ike_proposal_dh_group = "set security ike proposal " + ike_proposal_name + " dh-group " + menu_ike_proposal_dh_group['2']
 		set_commands['2'] = ike_proposal_dh_group
 		break
 	elif selection_ike_proposal_dh_group == '3':
+		conf_dh_group = menu_ike_proposal_dh_group['3']
 		ike_proposal_dh_group = "set security ike proposal " + ike_proposal_name + " dh-group " + menu_ike_proposal_dh_group['3']
 		set_commands['2'] = ike_proposal_dh_group
 		break
 	elif selection_ike_proposal_dh_group == '4':
+		conf_dh_group = menu_ike_proposal_dh_group['4']
 		ike_proposal_dh_group = "set security ike proposal " + ike_proposal_name + " dh-group " + menu_ike_proposal_dh_group['4']
 		set_commands['2'] = ike_proposal_dh_group
 		break
 	elif selection_ike_proposal_dh_group == '5':
+		conf_dh_group = menu_ike_proposal_dh_group['5']
 		ike_proposal_dh_group = "set security ike proposal " + ike_proposal_name + " dh-group " + menu_ike_proposal_dh_group['5']
 		set_commands['2'] = ike_proposal_dh_group
 		break
 	elif selection_ike_proposal_dh_group == '6':
+		conf_dh_group = menu_ike_proposal_dh_group['6']
 		ike_proposal_dh_group = "set security ike proposal " + ike_proposal_name + " dh-group " + menu_ike_proposal_dh_group['6']
 		set_commands['2'] = ike_proposal_dh_group
 		break
 	elif selection_ike_proposal_dh_group == '7':
+		conf_dh_group = menu_ike_proposal_dh_group['7']
 		ike_proposal_dh_group = "set security ike proposal " + ike_proposal_name + " dh-group " + menu_ike_proposal_dh_group['7']
 		set_commands['2'] = ike_proposal_dh_group
 		break
@@ -157,30 +173,37 @@ while True:
 
 	selection_ike_proposal_enc_algo = raw_input("Please Select:")
 	if selection_ike_proposal_enc_algo == '1':
+		conf_enc_algo = menu_ike_proposal_enc_algo['1']
 		ike_proposal_enc_algo = "set security ike proposal " + ike_proposal_name + " encryption-algorithm " + menu_ike_proposal_enc_algo['1']
 		set_commands['3'] = ike_proposal_enc_algo
 		break
 	elif selection_ike_proposal_enc_algo == '2':
+		conf_enc_algo = menu_ike_proposal_enc_algo['2']
 		ike_proposal_enc_algo = "set security ike proposal " + ike_proposal_name + " encryption-algorithm " + menu_ike_proposal_enc_algo['2']
 		set_commands['3'] = ike_proposal_enc_algo
 		break
 	elif selection_ike_proposal_enc_algo == '3':
+		conf_enc_algo = menu_ike_proposal_enc_algo['3']
 		ike_proposal_enc_algo = "set security ike proposal " + ike_proposal_name + " encryption-algorithm " + menu_ike_proposal_enc_algo['3']
 		set_commands['3'] = ike_proposal_enc_algo
 		break
 	elif selection_ike_proposal_enc_algo == '4':
+		conf_enc_algo = menu_ike_proposal_enc_algo['4']
 		ike_proposal_enc_algo = "set security ike proposal " + ike_proposal_name + " encryption-algorithm " + menu_ike_proposal_enc_algo['4']
 		set_commands['3'] = ike_proposal_enc_algo
 		break
 	elif selection_ike_proposal_enc_algo == '5':
+		conf_enc_algo = menu_ike_proposal_enc_algo['5']
 		ike_proposal_enc_algo = "set security ike proposal " + ike_proposal_name + " encryption-algorithm " + menu_ike_proposal_enc_algo['5']
 		set_commands['3'] = ike_proposal_enc_algo
 		break
 	elif selection_ike_proposal_enc_algo == '6':
+		conf_enc_algo = menu_ike_proposal_enc_algo['6']
 		ike_proposal_enc_algo = "set security ike proposal " + ike_proposal_name + " encryption-algorithm " + menu_ike_proposal_enc_algo['6']
 		set_commands['3'] = ike_proposal_enc_algo
 		break
 	elif selection_ike_proposal_enc_algo == '7':
+		conf_enc_algo = menu_ike_proposal_enc_algo['7']
 		ike_proposal_enc_algo = "set security ike proposal " + ike_proposal_name + " encryption-algorithm " + menu_ike_proposal_enc_algo['7']
 		set_commands['3'] = ike_proposal_enc_algo
 		break
@@ -200,5 +223,26 @@ while True:
 		continue
 
 
-for entry in set_commands:
-	print set_commands[entry]
+menu = {}
+menu['1'] = "Show set command"
+menu['2'] = "Print curl command"
+
+
+while True:
+	options_menu = menu.keys()
+	options_menu.sort()
+	for entry in options_menu:
+		print entry, menu[entry]
+
+	selection_menu = raw_input("Please Select:")
+	if selection_menu == '1':
+		for entry in set_commands:
+			print set_commands[entry]
+		break
+	elif selection_menu == '2':
+		body = "<security><ike><proposal><name>" + ike_proposal_name + "</name><authentication-method>" + conf_auth_method + "</authentication-method><dh-group>" + conf_dh_group + "</dh-group><authentication-algorithm>" + conf_auth_algo + "</authentication-algorithm><encryption-algorithm>" + conf_enc_algo + "</encryption-algorithm><lifetime-seconds>" + ike_proposal_lifetime_seconds + "</lifetime-seconds></proposal></ike></security>"
+		print "curl http://<host>:<port>/rpc/ -u '<username>:<password>' -H 'Content-Type:application/xml' -H 'Accept: application/xml' -d '" + body + "'"
+
+		break
+	else:
+		print "Unknown option selected"
