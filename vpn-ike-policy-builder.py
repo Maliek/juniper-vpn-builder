@@ -119,7 +119,7 @@ while True:
 				print entry, menu_ike_policy_psc[entry]
 
 			selection_ike_policy_psc = raw_input("Please Select:")
-			if selection_ike_policy_psc == '1':	
+			if selection_ike_policy_psc == '1':
 				ike_policy_psc_ascii = raw_input("set security ike policy " + ike_policy_name + " " + menu_ike_policy_cert_or_psc['2'] + " " + menu_ike_policy_psc['1'] + " ")
 				ike_policy_policy_psc_ascii_command = "set security ike policy " + ike_policy_name + " " + menu_ike_policy_cert_or_psc['2'] + " " + menu_ike_policy_psc['1'] + " " + ike_policy_psc_ascii
 				set_commands['2'] = ike_policy_policy_psc_ascii_command
@@ -204,6 +204,3 @@ while True:
 		print "Unknown option selected"
 		continue
 	break
-
-for entry in set_commands:
-	print set_commands[entry]
