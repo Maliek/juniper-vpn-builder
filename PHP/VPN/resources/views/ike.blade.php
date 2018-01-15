@@ -18,7 +18,21 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    IKE builder
+                    <h1>IKE builder</h1>
+                </div>
+
+
+                <div>
+                    <h2>IKE proposal</h2>
+                    {!! Form::open(['url' => 'foo/bar']) !!}
+                        <label>Name:</label>
+                        {!! Form::text('name') !!}
+                        <br>
+                        <label>Authentication algorithm:</label>
+                        {!! Form::select('auth_algo', ['md5' => 'md5', 'sha-256' => 'sha-256', 'sha-384' => 'sha-384', 'sha1' => 'sha1']); !!}
+
+                    {!! Form::close() !!}
+
                 </div>
 
                 <div class="links">
